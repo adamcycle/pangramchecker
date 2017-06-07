@@ -33,15 +33,18 @@ i - ignore case
 document.getElementById("check").addEventListener("click", function(e) {
 
 /* Set i = to whatever is in the text input field /*
+
 var i = document.getElementById("input").value;
 
 /*  Return value of the input, match it to regex, and make sure it's more than 25 characters. /*
+
 function testpan(input) {
     var regex = /([a-z])(?!.*\1)/gi;
     return (input.match(regex) || []).length > 25;
   }
 
 /* if the input (i) tests good, "Yep" is displayed, if not, "Nope" is displayed. preventDefault stops the function from starting over.
+
 if (testpan(i)) {
     document.getElementById("result").innerHTML = "Yep";
   } else document.getElementById("result").innerHTML = "Nope";
