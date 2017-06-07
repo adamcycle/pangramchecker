@@ -1,6 +1,8 @@
 # pangramchecker
 Test for Pangrams (Strings that contain all letters of the English alphabet)
 
+
+
 This is version 1.0.
 
 Built as part of a proficiency test for a job.
@@ -11,12 +13,19 @@ text field.
 RegExp:
 /([a-z])(?!.*\1)/gi
 
+
 [a-z] - self explanatory (I hope)
+
 ?! - Negative lookahead. Specifies a group that can not match after the main expression (if it matches, the result is discarded).
+    
 . - (Dot) Matches any character except line breaks.
+
 * - (Star) Match 0 or more of the preceding token.
+
 \1 - Backreference. Matches the results of capture group #1.
+
 g - Global search
+
 i - ignore case
 
 -----
